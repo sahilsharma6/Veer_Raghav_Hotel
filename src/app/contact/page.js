@@ -76,16 +76,28 @@ function ContactSection() {
       {/* Content Section */}
       <div className="container mx-auto py-12 px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card
-            imageSrc={img2}
-            title="Reception Always Open"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
-          />
-          <Card
-            imageSrc={img2}
-            title="Online Reservations"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
-          />
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card
+              imageSrc={img2}
+              title="Reception Always Open"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            />
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card
+              imageSrc={img2}
+              title="Online Reservations"
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+            />
+          </motion.div>
         </div>
       </div>
 
@@ -100,22 +112,36 @@ function ContactSection() {
       </div>
 
       {/* Contact Form Section */}
-      <div className="bg-white py-16 bg-gradient-to-r from-[#FF9933] to-[#f3bb83]">
+      <motion.div 
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white py-16 bg-gradient-to-r from-orange-400 to-yellow-300"
+      >
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
           {/* Left Section */}
-          <div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
             <p className="text-sm text-gray-600 uppercase tracking-wider mb-4">Contact Us</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-white">Get In Touch</h2>
             <p className="text-gray-700 mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor tellus vel mauris scelerisque accumsan.
+              lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor tellus vel mauris scelerisque accumsan.
             </p>
             <button className="bg-gradient-to-r from-[#e5e2e0] to-[#FFA500] text-white px-6 py-2 font-merriweather font-semibold text-lg uppercase tracking-wide rounded shadow-md hover:from-[#FFA500] hover:to-[#FF9933] transition duration-300">
               View Prices
             </button>
-          </div>
+          </motion.div>
 
           {/* Right Section (Form) */}
-          <div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.5 }}
+          >
             <form className="space-y-4">
               <div>
                 <input
@@ -146,9 +172,9 @@ function ContactSection() {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
